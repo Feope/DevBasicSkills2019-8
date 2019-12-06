@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    width: 120px;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+input[type=number]:focus {
+    background-color: lightblue;
+}
+
+/* Hiding number arrows in Chrome, IE and other browsers */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hiding number arrows in Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
