@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="styles.css">
     <title>Project Group 8</title>
+    <script src="javascript.js"></script>
 </head>
 <body>
-    
+    <h1> Simple math</h1>
+    <form> 
+        <input id="dec" onkeyup="convert_dec()" type="number">
+        Decimal<br>
+        <input id="bin" onkeyup="convert_bin()" type="number">
+        Binary<br>
+        <input id="oct" onkeyup="convert_oct()" type="number">
+        Octa<br>
+        <input id="hex" onkeyup="convert_hex()" type="text">
+        Hexa<br>
+    </form>    
 </body>
 </html>
