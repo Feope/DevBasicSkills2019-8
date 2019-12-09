@@ -1,3 +1,10 @@
+var conversions_shown = false;
+var conv_tables_shown = false;
+var combinatorics_shown = false;
+var truth_shown = false;
+var rndm_shown = false;
+
+
 function convert_dec()
 {
     decimal = + document.getElementById("dec").value;
@@ -76,7 +83,75 @@ function convert_hex()
 
 function conversions()
 {
+  if(conv_tables_shown == true)
+  {
+    conversion_tables();
+  }
+  if(combinatorics_shown == true)
+  {
+    combinatorics();
+  }
+  if(truth_shown == true)
+  {
+    truth();
+  }
+  if(rndm_shown == true)
+  {
+    rndm();
+  }
+  conversions_shown = !conversions_shown
   element = document.getElementById("1")
   element.classList.toggle('conversion_hide');
   element.classList.toggle('conversion');
+}
+
+function conversion_tables()
+{
+  if(conversions_shown == true)
+  {
+    conversions();
+  }
+  if(combinatorics_shown == true)
+  {
+    combinatorics();
+  }
+  if(truth_shown == true)
+  {
+    truth();
+  }
+  if(rndm_shown == true)
+  {
+    rndm();
+  }
+  var value = 0;
+
+  var printed = -1;
+  var printed_oct = -1;
+  var printed_hex = -1;
+
+  while(value < 51)
+  {
+    if(printed == -1)
+    {
+      printed = value.toString(2);
+      printed_oct = value.toString(8);
+      printed_hex = value.toString(16);
+    }
+    else{
+      printed = printed + "<br>" + value.toString(2);
+      printed_oct = printed_oct + "<br>" + value.toString(8);
+      printed_hex = printed_hex + "<br>" + value.toString(16);
+    }
+    value++;
+  }
+  if(conv_tables_shown == true)
+  {
+    printed = "";
+    printed_oct = "";
+    printed_hex = "";
+  }
+  document.querySelector(".bin_table").innerHTML = printed;
+  document.querySelector(".oct_table").innerHTML = printed_oct;
+  document.querySelector(".hex_table").innerHTML = printed_hex;
+  conv_tables_shown = !conv_tables_shown;
 }

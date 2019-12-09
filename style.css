@@ -31,7 +31,7 @@ input[type=number] {
 
 .conversion_hide{
 position: relative;
-left: -500px;
+left: -1500px;
 float: left;
 }
 
@@ -60,4 +60,9 @@ float: left;
   border: inherit;
 }
 
+.conversion_table{
+  position: relative;
+  left: 250px;
+  float: left;
+}
 
