@@ -7,8 +7,15 @@
     <script src="javascript.js"></script>
 </head>
 <body>
-    <h1> Conversion tables</h1>
-    <form> 
+    <div class="sidemenu">
+        <div class="sidemenu_button" onclick="conversions()">Conversions</div>
+        <div class="sidemenu_button">Conversions tables</div>
+        <div class="sidemenu_button">Combinatorics</div>
+        <div class="sidemenu_button">Truth tables</div>
+        <div class="sidemenu_button">Random values</div>
+    </div>
+    <form id="1" class="conversion_hide"> 
+        <h1> Conversions</h1>
         <input id="dec" onkeyup="convert_dec()" type="number">
         Decimal<br>
         <input id="bin" onkeyup="convert_bin()" type="number">

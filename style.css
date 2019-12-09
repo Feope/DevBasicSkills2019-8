@@ -28,3 +28,36 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance:textfield;
 }
+
+.conversion_hide{
+position: relative;
+left: -500px;
+float: left;
+}
+
+.conversion{
+  position: relative;
+  left: 10%;
+  float: left;
+}
+
+.sidemenu{
+  background: crimson;
+  width: 15%;
+  min-width: 160px;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 14px;
+  overflow: hidden; 
+  float: left;
+  clear: both;
+}
+
+.sidemenu_button{
+  cursor: pointer;
+  padding: 6px;
+  font-size: 23px;
+  border: inherit;
+}
+
+

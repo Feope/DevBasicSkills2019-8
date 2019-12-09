@@ -73,3 +73,10 @@ function convert_hex()
   
   }
 }
+
+function conversions()
+{
+  element = document.getElementById("1")
+  element.classList.toggle('conversion_hide');
+  element.classList.toggle('conversion');
+}
