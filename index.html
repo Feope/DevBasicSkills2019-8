@@ -10,13 +10,14 @@
     <div class="sidemenu">
         <div class="sidemenu_button" onclick="conversions()">Conversions</div>
         <div class="sidemenu_button" onclick="conversion_tables()">Conversions tables</div>
-        <div class="sidemenu_button">Combinatorics</div>
+        <div class="sidemenu_button" onclick="combinatorics_toggle()">Combinatorics</div>
         <div class="sidemenu_button">Truth tables</div>
         <div class="sidemenu_button">Random values</div>
     </div>
-    <div class="conversion_table bin_table"></div>
-    <div class="conversion_table oct_table"></div>
-    <div class="conversion_table hex_table"></div>
+    <div id="t0" class="conversion_table conversion_table_hide dec_table"></div>
+    <div id="t1" class="conversion_table conversion_table_hide bin_table"></div>
+    <div id="t2" class="conversion_table conversion_table_hide oct_table"></div>
+    <div id="t3" class="conversion_table conversion_table_hide hex_table"></div>
     <form id="1" class="conversion_hide"> 
         <h1> Conversions</h1>
         <input id="dec" onkeyup="convert_dec()" type="number">
@@ -27,6 +28,14 @@
         Octa<br>
         <input id="hex" onkeyup="convert_hex()" type="text">
         Hexa<br>
+    </form>
+    <form class="combinatorics comb_hide">
+        <input id="m" type="number" value="0" onkeyup="combinatorics()">m<br>
+        <input id="n" type="number" value="0" onkeyup="combinatorics()">n<br>
+        <input id="c1" type="checkbox" value="0" onclick="active_replacement()"> Permutations<br><br>
+        <input id="r1" name="replacement" type="radio" onclick="combinatorics()" disabled> With replacement
+        <input id="r2" name="replacement" type="radio" onclick="combinatorics()" disabled> Without replacement<br><br>
+        <div class="comb_result">Result</div>
     </form>    
 </body>
 </html>
