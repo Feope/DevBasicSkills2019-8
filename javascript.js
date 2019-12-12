@@ -244,3 +244,126 @@ function combinatorics_toggle()
   combinatorics_shown = !combinatorics_shown;
   document.querySelector(".combinatorics").classList.toggle("comb_hide");
 }
+
+function truth()
+{
+  if(conversions_shown == true)
+  {
+    conversions();
+  }
+  if(conv_tables_shown == true)
+  {
+    conversion_tables();
+  }
+  if(combinatorics_shown == true)
+  {
+    combinatorics_toggle();
+  }
+  if(rndm_shown == true)
+  {
+    rndm();
+  }
+
+  truth_shown = !truth_shown;
+  document.querySelector(".ttables").classList.toggle("thide");
+}
+
+function tables(){
+  or = false;
+  and =false;
+  xor = false;
+  not = false;
+  if( document.getElementById("or").checked == true)
+  {
+    or = true;
+  }
+  else{
+    or = false;
+  }
+
+  if( document.getElementById("and").checked == true)
+  {
+    and = true;
+  }
+  else{
+    and = false;
+  }
+
+  if( document.getElementById("xor").checked == true)
+  {
+    xor = true;
+  }
+  else{
+    xor = false;
+  }
+
+  if( document.getElementById("not").checked == true)
+  {
+    not = true;
+  }
+  else{
+    not = false;
+  }
+
+  if( or == true )
+  {
+    document.querySelector(".theader").innerHTML = "OR";
+    document.querySelector(".ta2").innerHTML = "A";
+    document.querySelector(".ta").innerHTML = 0;
+    document.querySelector(".ta1").innerHTML = 0;
+    document.querySelector(".ta3").innerHTML = 1;
+    document.querySelector(".ta4").innerHTML = 1;
+    document.querySelector(".tb3").innerHTML = 0;
+    document.querySelector(".tb4").innerHTML = 1;
+    document.querySelector(".toutput1").innerHTML = 0 || 0;
+    document.querySelector(".toutput2").innerHTML = 0 || 1;
+    document.querySelector(".toutput3").innerHTML = 1 || 0;
+    document.querySelector(".toutput4").innerHTML = 1 || 1;
+  }
+  if( and == true )
+  {
+    document.querySelector(".theader").innerHTML = "AND";
+    document.querySelector(".ta2").innerHTML = "A";
+    document.querySelector(".ta").innerHTML = 0;
+    document.querySelector(".ta1").innerHTML = 0;
+    document.querySelector(".ta3").innerHTML = 1;
+    document.querySelector(".ta4").innerHTML = 1;
+    document.querySelector(".tb3").innerHTML = 0;
+    document.querySelector(".tb4").innerHTML = 1;
+    document.querySelector(".toutput1").innerHTML = 0 && 0;
+    document.querySelector(".toutput2").innerHTML = 0 && 1;
+    document.querySelector(".toutput3").innerHTML = 1 && 0;
+    document.querySelector(".toutput4").innerHTML = 1 && 1;
+  }
+  if( not == true )
+  {
+    document.querySelector(".theader").innerHTML = "NOT";
+    document.querySelector(".ta2").innerHTML = "";
+    document.querySelector(".ta").innerHTML = "";
+    document.querySelector(".ta1").innerHTML = "";
+    document.querySelector(".ta3").innerHTML = "";
+    document.querySelector(".ta4").innerHTML = "";
+    document.querySelector(".tb3").innerHTML = "";
+    document.querySelector(".tb4").innerHTML = "";
+    document.querySelector(".toutput1").innerHTML = !0;
+    document.querySelector(".toutput2").innerHTML = !1;
+    document.querySelector(".toutput3").innerHTML = "";
+    document.querySelector(".toutput4").innerHTML = "";
+  }
+  if( xor == true )
+  {
+    document.querySelector(".theader").innerHTML = "XOR";
+    document.querySelector(".ta2").innerHTML = "A";
+    document.querySelector(".ta").innerHTML = 0;
+    document.querySelector(".ta1").innerHTML = 0;
+    document.querySelector(".ta3").innerHTML = 1;
+    document.querySelector(".ta4").innerHTML = 1;
+    document.querySelector(".tb3").innerHTML = 0;
+    document.querySelector(".tb4").innerHTML = 1;
+    document.querySelector(".toutput1").innerHTML = 0;
+    document.querySelector(".toutput2").innerHTML = 1;
+    document.querySelector(".toutput3").innerHTML = 1;
+    document.querySelector(".toutput4").innerHTML = 0;
+  }
+
+}

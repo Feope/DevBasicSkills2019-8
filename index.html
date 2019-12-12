@@ -11,7 +11,7 @@
         <div class="sidemenu_button" onclick="conversions()">Conversions</div>
         <div class="sidemenu_button" onclick="conversion_tables()">Conversions tables</div>
         <div class="sidemenu_button" onclick="combinatorics_toggle()">Combinatorics</div>
-        <div class="sidemenu_button">Truth tables</div>
+        <div class="sidemenu_button" onclick="truth(), tables()">Truth tables</div>
         <div class="sidemenu_button">Random values</div>
     </div>
     <div id="t0" class="conversion_table conversion_table_hide dec_table"></div>
@@ -36,6 +36,30 @@
         <input id="r1" name="replacement" type="radio" onclick="combinatorics()" disabled> With replacement
         <input id="r2" name="replacement" type="radio" onclick="combinatorics()" disabled> Without replacement<br><br>
         <div class="comb_result">Result</div>
-    </form>    
+    </form>  
+    <form class="ttables thide">
+        <input id="or"  name="gate"  type="radio" onclick="tables()" checked="checked">OR
+        <input id="and" name="gate" type="radio" onclick="tables()" >AND
+        <input id="xor" name="gate" type="radio" onclick="tables()" >XOR
+        <input id="not" name="gate" type="radio" onclick="tables()" >NOT<br><br>
+        <div class="grid-container">
+            <div class="grid-item theader">OR</div>
+            <div class="grid-item ta">0</div>
+            <div class="grid-item tb">B</div>
+            <div class="grid-item toutput">Output</div>
+            <div class="grid-item ta1">0</div>
+            <div class="grid-item tb1">0</div>
+            <div class="grid-item toutput1">7</div>
+            <div class="grid-item ta2">A</div>
+            <div class="grid-item tb2">1</div>
+            <div class="grid-item toutput2">10</div>
+            <div class="grid-item ta3">1</div>
+            <div class="grid-item tb3">0</div>
+            <div class="grid-item toutput3">13</div>
+            <div class="grid-item ta4">1</div>
+            <div class="grid-item tb4">1</div>
+            <div class="grid-item toutput4">16</div>
+        </div>
+    </form> 
 </body>
 </html>

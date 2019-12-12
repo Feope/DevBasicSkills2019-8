@@ -30,14 +30,14 @@ input[type=number] {
 }
 
 .conversion_hide{
-position: relative;
+position: absolute;
 left: -1500px;
 float: left;
 }
 
 .conversion{
-  position: relative;
-  left: 10%;
+  position: absolute;
+  left: 20%;
   float: left;
 }
 
@@ -62,7 +62,7 @@ float: left;
 
 .conversion_table{
   position: relative;
-  left: 10%;
+  left: 5%;
   float: left;
   border: 1px solid black;
 }
@@ -73,12 +73,13 @@ float: left;
 }
 
 .combinatorics{
-  position: relative;
+  position: absolute;
   float: left;
   top: 25px;
+  left: 20%;
 }
 
-.combinatorics input[type=radio]{
+input[type=radio]{
   width: 10px;
   height: 10px;
 }
@@ -127,4 +128,87 @@ float: left;
 
 .comb_hide{
   left: -1000px;
+}
+
+.ttables{
+  position: absolute;
+  float: left;
+  top: 25px;
+  left: 20%;
+}
+
+.thide{
+  position: absolute;
+  left: -1000px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-rows: [rowA] 50px [romB] 50px [rowC] 50px [rowD] 50px [rowE] 50px [rowF] 50px [colG];
+  grid-template-columns: [colA] 50px [colB] 50px [colC] 50px [colD] 50px [colE];
+  grid-template-areas: 
+  "theader theader theader theader"
+  "ta  tb  toutput  toutput"
+  "ta1 tb1 toutput1 toutput1"
+  "ta2 tb2 toutput2 toutput2"
+  "ta3 tb3 toutput3 toutput3"
+  "ta4 tb4 toutput4 toutput4";
+}
+
+.grid-item{
+  border: 1px solid black;
+  text-align: center;
+  padding: 12px;
+}
+
+.theader{
+  grid-area: theader;
+}
+
+.ta{
+  grid-area: ta;
+}
+.ta1{
+  grid-area: ta1;
+}
+.ta{
+  grid-area: ta2;
+}
+.ta3{
+  grid-area: ta3;
+}
+.ta4{
+  grid-area: ta4;
+}
+
+.tb{
+  grid-area: tb;
+}
+.tb1{
+  grid-area: tb1;
+}
+.tb2{
+  grid-area: tb2;
+}
+.tb3{
+  grid-area: tb3;
+}
+.tb4{
+  grid-area: tb4;
+}
+
+.toutput{
+  grid-area: toutput;
+}
+.toutput1{
+  grid-area: toutput1;
+}
+.toutput2{
+  grid-area: toutput2;
+}
+.toutput3{
+  grid-area: toutput3;
+}
+.toutput4{
+  grid-area: toutput4;
 }
