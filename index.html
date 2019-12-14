@@ -8,18 +8,17 @@
 </head>
 <body>
     <div class="sidemenu">
-        <div class="sidemenu_button" onclick="conversions()">Conversions</div>
-        <div class="sidemenu_button" onclick="conversion_tables()">Conversions tables</div>
-        <div class="sidemenu_button" onclick="combinatorics_toggle()">Combinatorics</div>
-        <div class="sidemenu_button" onclick="truth(), tables()">Truth tables</div>
-        <div class="sidemenu_button">Random values</div>
+        <div id="conversion_side" class="sidemenu_button" onclick="conversions()">Conversions</div>
+        <div id="conversion_table_side" class="sidemenu_button" onclick="conversion_tables()">Conversions tables</div>
+        <div id="combinatorics_side" class="sidemenu_button" onclick="combinatorics_toggle()">Combinatorics</div>
+        <div id="truth_side"  class="sidemenu_button" onclick="truth(), tables()">Truth tables</div>
+        <div id="random_side" class="sidemenu_button" onclick="rndm()">Random values</div>
     </div>
     <div id="t0" class="conversion_table conversion_table_hide dec_table"></div>
     <div id="t1" class="conversion_table conversion_table_hide bin_table"></div>
     <div id="t2" class="conversion_table conversion_table_hide oct_table"></div>
     <div id="t3" class="conversion_table conversion_table_hide hex_table"></div>
     <form id="1" class="conversion_hide"> 
-        <h1> Conversions</h1>
         <input id="dec" onkeyup="convert_dec()" type="number">
         Decimal<br>
         <input id="bin" onkeyup="convert_bin()" type="number">
@@ -61,5 +60,11 @@
             <div class="grid-item toutput4">16</div>
         </div>
     </form> 
+    <form class="distribution distribution_hide">
+        <input id="from" value="0" type="number" onkeyup="random_value()"> - 
+        <input id="to" value="0" type="number" onkeyup="random_value()"> Range<br><br>
+        <input id="amount" value="0" type="number" onkeyup="random_value()"> Amount <br><br>
+        <div class="distr_result"> 0 </div>
+    </form>
 </body>
 </html>

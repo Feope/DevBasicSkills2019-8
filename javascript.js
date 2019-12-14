@@ -99,6 +99,8 @@ function conversions()
   {
     rndm();
   }
+
+  document.getElementById("conversion_side").classList.toggle("active");
   conversions_shown = !conversions_shown
   element = document.getElementById("1")
   element.classList.toggle('conversion_hide');
@@ -163,6 +165,7 @@ function conversion_tables()
   document.querySelector(".bin_table").innerHTML = "Bin: <br>" + printed;
   document.querySelector(".oct_table").innerHTML = "Oct: <br>" + printed_oct;
   document.querySelector(".hex_table").innerHTML = "Hex: <br>" + printed_hex;
+  document.getElementById("conversion_table_side").classList.toggle("active");
   conv_tables_shown = !conv_tables_shown;
 }
 
@@ -241,6 +244,7 @@ function combinatorics_toggle()
     rndm();
   }
 
+  document.getElementById("combinatorics_side").classList.toggle("active");
   combinatorics_shown = !combinatorics_shown;
   document.querySelector(".combinatorics").classList.toggle("comb_hide");
 }
@@ -264,6 +268,7 @@ function truth()
     rndm();
   }
 
+  document.getElementById("truth_side").classList.toggle("active");
   truth_shown = !truth_shown;
   document.querySelector(".ttables").classList.toggle("thide");
 }
@@ -366,4 +371,55 @@ function tables(){
     document.querySelector(".toutput4").innerHTML = 0;
   }
 
+}
+
+function rndm()
+{
+  if(conversions_shown == true)
+  {
+    conversions();
+  }
+  if(conv_tables_shown == true)
+  {
+    conversion_tables();
+  }
+  if(combinatorics_shown == true)
+  {
+    combinatorics_toggle();
+  }
+  if(truth_shown == true)
+  {
+    truth();
+  }
+
+  document.getElementById("random_side").classList.toggle("active");
+  rndm_shown = !rndm_shown;
+  document.querySelector(".distribution").classList.toggle("distribution_hide");
+}
+
+function random_value()
+{
+  from = document.getElementById("from").value;
+  to  = document.getElementById("to").value;
+  to++;
+  amount = document.getElementById("amount").value;
+  result = [];
+  index = 0;
+
+  while( index < amount)
+  {
+  random = Math.floor( Math.random() * Math.floor( parseFloat(to) - parseFloat(from) ) );
+  random = parseFloat(random) + parseFloat(from);
+  result.push( " " + random);
+  result.sort(sortNumbers);
+  index++;
+  }
+
+
+  document.querySelector(".distr_result").innerHTML = result;
+}
+
+function sortNumbers(a, b)
+{
+  return a - b;
 }

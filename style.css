@@ -38,11 +38,12 @@ float: left;
 .conversion{
   position: absolute;
   left: 20%;
+  top: 25px;
   float: left;
 }
 
 .sidemenu{
-  background: crimson;
+  background: rgb(200, 45, 206);
   width: 15%;
   min-width: 160px;
   border: 1px solid black;
@@ -51,6 +52,10 @@ float: left;
   overflow: hidden; 
   float: left;
   clear: both;
+}
+
+.active{
+  background: purple;
 }
 
 .sidemenu_button{
@@ -63,6 +68,7 @@ float: left;
 .conversion_table{
   position: relative;
   left: 5%;
+  top: 25px;
   float: left;
   border: 1px solid black;
 }
@@ -211,4 +217,22 @@ input[type=radio]{
 }
 .toutput4{
   grid-area: toutput4;
+}
+
+.distribution{
+  position: absolute;
+  float: left;
+  top: 25px;
+  left: 20%;
+}
+
+.distribution_hide{
+  top: -1000px;
+}
+
+.distr_result{
+  border: 1px solid black;
+  border-radius: 4px;
+  max-width: 325px;
+  padding: 4px;
 }
