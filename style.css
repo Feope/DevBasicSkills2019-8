@@ -37,14 +37,16 @@ float: left;
 
 .conversion{
   position: absolute;
-  left: 20%;
+  left: 270px;
   top: 25px;
   float: left;
+  clear: both;
 }
 
 .sidemenu{
   background: rgb(200, 45, 206);
   width: 15%;
+  max-width: 260px;
   min-width: 160px;
   border: 1px solid black;
   text-align: center;
@@ -82,7 +84,7 @@ float: left;
   position: absolute;
   float: left;
   top: 25px;
-  left: 20%;
+  left: 270px;
 }
 
 input[type=radio]{
@@ -140,7 +142,7 @@ input[type=radio]{
   position: absolute;
   float: left;
   top: 25px;
-  left: 20%;
+  left: 270px;
 }
 
 .thide{
@@ -223,7 +225,7 @@ input[type=radio]{
   position: absolute;
   float: left;
   top: 25px;
-  left: 20%;
+  left: 270px;
 }
 
 .distribution_hide{

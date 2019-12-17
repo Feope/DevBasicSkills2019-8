@@ -31,7 +31,7 @@
     <form class="combinatorics comb_hide">
         <input id="m" type="number" value="0" onkeyup="combinatorics()">m<br>
         <input id="n" type="number" value="0" onkeyup="combinatorics()">n<br>
-        <input id="c1" type="checkbox" value="0" onclick="active_replacement()"> Permutations<br><br>
+        <input id="c1" type="checkbox" value="0" onclick="active_replacement(), combinatorics()"> Permutations<br><br>
         <input id="r1" name="replacement" type="radio" onclick="combinatorics()" disabled> With replacement
         <input id="r2" name="replacement" type="radio" onclick="combinatorics()" disabled> Without replacement<br><br>
         <div class="comb_result">Result</div>
@@ -63,7 +63,7 @@
     <form class="distribution distribution_hide">
         <input id="from" value="0" type="number" onkeyup="random_value()"> - 
         <input id="to" value="0" type="number" onkeyup="random_value()"> Range<br><br>
-        <input id="amount" value="0" type="number" onkeyup="random_value()"> Amount <br><br>
+        <input id="amount" value="0" type="number" onkeyup="random_value()"> Amount of numbers generated <br><br>
         <div class="distr_result"> 0 </div>
     </form>
 </body>
